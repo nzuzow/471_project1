@@ -11,6 +11,7 @@ private:
 	double m_time;
 	double m_attack;
 	double m_release;
+	int pushtest;
 	CAudioNode* m_source;
 public:
 	void SetSource(CAudioNode* const &source) { m_source = source; }
