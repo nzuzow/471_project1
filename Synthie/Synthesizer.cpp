@@ -83,6 +83,16 @@ bool CSynthesizer::Generate(double * frame)
 		{
 			instrument = new CToneInstrument(GetBeatsPerMinute());
 		}
+		else if (note->Instrument() == L"OddSines")
+		{
+			m_oddsinesfactory.SetNote(note);
+			instrument = m_oddsinesfactory.CreateInstrument();
+		}
+		else if (note->Instrument() == L"Wave")
+		{
+			m_waveinstfactory.SetNote(note);
+			instrument = m_waveinstfactory.CreateInstrument();
+		}
 
 		// Configure the instrument object
 		if (instrument != NULL)
