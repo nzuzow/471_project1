@@ -96,10 +96,10 @@
     <ClCompile Include="ADSR.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ShortWaveTable.cpp">
+    <ClCompile Include="DrumInstrument.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LongWaveTable.cpp">
+    <ClCompile Include="DrumInstrumentFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -194,10 +194,10 @@
     <ClInclude Include="ADSR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ShortWaveTable.h">
+    <ClInclude Include="DrumInstrument.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LongWaveTable.h">
+    <ClInclude Include="DrumInstrumentFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
