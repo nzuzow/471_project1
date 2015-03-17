@@ -106,6 +106,11 @@ bool CSynthesizer::Generate(double * frame)
 			m_oddsinesfactory.SetNote(note);
 			instrument = m_oddsinesfactory.CreateInstrument();
 		}
+		else if (note->Instrument() == L"Drum")
+		{
+			m_drumfactory.SetNote(note);
+			instrument = m_drumfactory.CreateInstrument();
+		}
 
 		// Configure the instrument object
 		if (instrument != NULL)
