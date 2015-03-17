@@ -51,6 +51,7 @@ void CNote::XmlLoad(IXMLDOMNode * xml, std::wstring & instrument)
 			value.ChangeType(VT_R8);
 			m_beat = value.dblVal - 1;
 		}
+		//else if (name == "")
 	}
 }
 bool CNote::operator<(const CNote &b)
