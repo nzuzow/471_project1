@@ -1,5 +1,7 @@
 #pragma once
 #include "Instrument.h"
+#include "WavePlayer.h"
+
 class CWaveInstrument :
 	public CInstrument
 {

@@ -16,7 +16,8 @@ CSynthesizer::CSynthesizer()
 	m_samplePeriod = 1 / m_sampleRate;
 	m_bpm = 120;            
 	m_beatspermeasure = 4;
-	m_secperbeat = 0.5;     
+	m_secperbeat = 0.5;
+	m_waveinstfactory.LoadFile("drumriff.wav");
 }
 
 

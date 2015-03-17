@@ -13,7 +13,7 @@ CWaveInstrument::~CWaveInstrument()
 
 void CWaveInstrument::Start()
 {
-	m_wavePlayer.SetSampleRate(SampleRate());
+	m_wavePlayer.SetSampleRate(GetSampleRate());
 	m_wavePlayer.Start();
 }
 

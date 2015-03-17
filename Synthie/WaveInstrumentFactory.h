@@ -1,4 +1,7 @@
 #pragma once
+#include "WaveInstrument.h"
+#include <vector>
+
 class CWaveInstrumentFactory
 {
 public:
@@ -7,6 +10,7 @@ public:
 
 	void SetNote(CNote *note);
 	CWaveInstrument *CreateInstrument();
+	bool CWaveInstrumentFactory::LoadFile(const char *filename);
 
 private:
 	std::vector<short> m_wave;
