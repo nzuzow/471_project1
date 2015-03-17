@@ -93,6 +93,9 @@
     <ClCompile Include="WavePlayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ADSR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audio\DirSound.h">
@@ -180,6 +183,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WavePlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADSR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

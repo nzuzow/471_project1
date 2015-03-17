@@ -126,6 +126,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ADSR.cpp" />
     <ClCompile Include="AR.cpp" />
     <ClCompile Include="AudioNode.cpp" />
     <ClCompile Include="audio\DirSound.cpp" />
@@ -157,6 +158,7 @@
     <ClCompile Include="WavePlayer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ADSR.h" />
     <ClInclude Include="AR.h" />
     <ClInclude Include="AudioNode.h" />
     <ClInclude Include="audio\DirSound.h" />
