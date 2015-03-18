@@ -3,6 +3,7 @@
 #include "WavePlayer.h"
 #include "SineWave.h"
 
+
 class CDrumInstrument :
 	public CInstrument
 {

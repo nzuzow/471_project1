@@ -3,6 +3,13 @@
 #include "DrumInstrument.h"
 #include <vector>
 
+class CNote;
+
+enum DrumStates{Snare1,Snare2,Snare3,Snare4,Beeper1,Beeper2,Hit1,Hit2,Hit3,HiHat1,HiHat2,HiHat3,HiHat4,HiHat5,
+				HiHat6,HiHat7, Tom1,Tom2, Skin1,Skin2,Skin3};
+
+
+
 class CDrumInstrumentFactory
 {
 public:
