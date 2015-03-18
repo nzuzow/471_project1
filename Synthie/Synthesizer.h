@@ -5,6 +5,14 @@ using namespace std;
 #include "msxml2.h"
 #include "Instrument.h"
 #include "Note.h"
+#include "Effect.h"
+#include "EffectFactory.h"
+
+#define CHORUS 1
+#define FLANGING 2
+#define NOISEGATING 3
+#define REVERBERATION 4
+
 class CSynthesizer
 {
 public:
@@ -34,6 +42,7 @@ public:
 	void XmlLoadScore(IXMLDOMNode * xml);
 	void XmlLoadInstrument(IXMLDOMNode * xml);
 	void XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument);
+	void XmlLoadEffect(IXMLDOMNode * xml, std::wstring & instrument);
 private:
 	int		m_channels;
 	double	m_sampleRate;
@@ -44,8 +53,11 @@ private:
 	int m_currentNote;          //!< The current note we are playing
 	int m_measure;              //!< The current measure
 	double m_beat;              //!< The current beat within the measure
-	std::list<CInstrument *>  m_instruments;
-	std::vector<CNote> m_notes;
+	std::list<CInstrument *>  m_instruments;	//!< List of synthesizer instruments
+	std::vector<CNote> m_notes;					//!< List of notes in the synthesizer
+	CEffect * m_effects[NUMEFFECTCHANNELS];		//!< List of synthesizer effects
+	CEffectFactory m_effectfactory;					//!< Factory for creating effects
+
 public:
 	void Start();
 	bool Generate(double*);

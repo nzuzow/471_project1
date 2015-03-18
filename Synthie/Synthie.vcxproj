@@ -131,12 +131,19 @@
     <ClCompile Include="audio\DirSound.cpp" />
     <ClCompile Include="audio\DirSoundSource.cpp" />
     <ClCompile Include="audio\DirSoundStream.cpp" />
+    <ClCompile Include="Chorus.cpp" />
+    <ClCompile Include="DelayEffect.cpp" />
+    <ClCompile Include="Effect.cpp" />
+    <ClCompile Include="EffectFactory.cpp" />
+    <ClCompile Include="Flanging.cpp" />
     <ClCompile Include="Instrument.cpp" />
     <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="NoiseGating.cpp" />
     <ClCompile Include="Note.cpp" />
     <ClCompile Include="Notes.cpp" />
     <ClCompile Include="Progress.cpp" />
     <ClCompile Include="ProgressDlg.cpp" />
+    <ClCompile Include="Reverberation.cpp" />
     <ClCompile Include="SineWave.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -149,6 +156,7 @@
     <ClCompile Include="audio\WaveformBuffer.cpp" />
     <ClCompile Include="audio\WaveformWnd.cpp" />
     <ClCompile Include="ToneInstrument.cpp" />
+    <ClCompile Include="Wrapper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AR.h" />
@@ -156,13 +164,20 @@
     <ClInclude Include="audio\DirSound.h" />
     <ClInclude Include="audio\DirSoundSource.h" />
     <ClInclude Include="audio\DirSoundStream.h" />
+    <ClInclude Include="Chorus.h" />
+    <ClInclude Include="DelayEffect.h" />
+    <ClInclude Include="Effect.h" />
+    <ClInclude Include="EffectFactory.h" />
+    <ClInclude Include="Flanging.h" />
     <ClInclude Include="Instrument.h" />
     <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="NoiseGating.h" />
     <ClInclude Include="Note.h" />
     <ClInclude Include="Notes.h" />
     <ClInclude Include="Progress.h" />
     <ClInclude Include="ProgressDlg.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Reverberation.h" />
     <ClInclude Include="SineWave.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Synthesizer.h" />
@@ -173,6 +188,7 @@
     <ClInclude Include="audio\WaveformBuffer.h" />
     <ClInclude Include="audio\WaveformWnd.h" />
     <ClInclude Include="ToneInstrument.h" />
+    <ClInclude Include="Wrapper.h" />
     <ClInclude Include="xmlhelp.h" />
   </ItemGroup>
   <ItemGroup>

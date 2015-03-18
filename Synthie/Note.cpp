@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Note.h"
-
+#include "sstream"
 
 CNote::CNote()
 {
@@ -50,6 +50,24 @@ void CNote::XmlLoad(IXMLDOMNode * xml, std::wstring & instrument)
 			// Same thing for the beats.
 			value.ChangeType(VT_R8);
 			m_beat = value.dblVal - 1;
+		}
+		else
+		{
+			// Go through each effect channel to get sends
+			for (int i = 0; i < NUMEFFECTCHANNELS; i++)
+			{
+				std::ostringstream ss;
+				ss << "send";
+				ss << i;
+
+				std::string s = ss.str();
+				std::wstring ename = std::wstring(s.begin(), s.end());
+				if (wcscmp(name, ename.c_str()) == 0)
+				{
+					value.ChangeType(VT_R8);
+					sends[i] = value.dblVal;
+				}
+			}
 		}
 	}
 }
