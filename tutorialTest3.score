@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="60" beatspermeasure="4">
+	<instrument instrument="Subtractive">
+		<note SubType="Sawtooth" duration="8" note="C4"/>
+	</instrument>
+</score>
