@@ -3,6 +3,7 @@
 #include "WavePlayer.h"
 #include "SineWave.h"
 #include "AR.h"
+#include "ADSR.h"
 
 class CShortWaveTable :
 	public CInstrument
