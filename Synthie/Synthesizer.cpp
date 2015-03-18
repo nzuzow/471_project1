@@ -98,7 +98,12 @@ bool CSynthesizer::Generate(double * frame)
 			m_waveinstfactory.SetNote(note);
 			instrument = m_waveinstfactory.CreateInstrument();
 		}
-
+		
+		else if (note->Instrument() == L"ShortWaveTable")
+		{
+			m_shortwavefactory.SetNote(note);
+			instrument = m_shortwavefactory.CreateInstrument();
+		}
 		else if (note->Instrument() == L"LongWave")
 		{
 			m_longwavefactory.SetNote(note);
