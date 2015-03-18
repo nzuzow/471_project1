@@ -6,6 +6,10 @@
 #include "xmlhelp.h"
 #include <vector>
 #include <algorithm>
+#include "Flanging.h"
+#include "Chorus.h"
+#include "Reverberation.h"
+#include "NoiseGating.h"
 
 CSynthesizer::CSynthesizer()
 : m_time(0)
@@ -16,14 +20,22 @@ CSynthesizer::CSynthesizer()
 	m_samplePeriod = 1 / m_sampleRate;
 	m_bpm = 120;            
 	m_beatspermeasure = 4;
-	m_secperbeat = 0.5;
+	m_secperbeat = 0.5;     
+
+	for (int i = 0; i < NUMEFFECTCHANNELS; i++)
+	{
+		m_effects[i] = NULL;
+	}
+
 	m_waveinstfactory.LoadFile("drumriff.wav");
 }
 
 
 CSynthesizer::~CSynthesizer()
 {
+	Clear();
 }
+
 
 //! Start the synthesizer
 void CSynthesizer::Start()
@@ -40,21 +52,12 @@ void CSynthesizer::Start()
 	m_measure = 0;
 	m_beat = 0;
 	m_time = 0;
+	m_effectfactory.Start();
 }
 
 
 bool CSynthesizer::Generate(double * frame)
 {
-	/*double sample = 0.1 * sin(2 * PI * 440 * GetTime());
-
-	for (int c = 0; c<GetNumChannels(); c++)
-	{
-		frame[c] = sample;
-	}
-
-	m_time += GetSamplePeriod();
-	return m_time < 5;*/
-
 	//
 	// Phase 1: Determine if any notes need to be played.
 	//
@@ -111,6 +114,26 @@ bool CSynthesizer::Generate(double * frame)
 			m_drumfactory.SetNote(note);
 			instrument = m_drumfactory.CreateInstrument();
 		}
+		else if (note->Instrument() == L"Chorus")
+		{
+			m_effects[CHORUS] = new CChorus();
+		}
+		else if (note->Instrument() == L"Flanging")
+		{
+			m_effects[FLANGING] = new CFlanging();
+		}
+		else if (note->Instrument() == L"NoiseGating")
+		{
+			m_effects[NOISEGATING] = new CNoiseGating();
+		}
+		else if (note->Instrument() == L"Reverberation")
+		{
+			m_effects[REVERBERATION] = new CReverberation();
+		}
+		else if (note->Instrument() == L"effect")
+		{
+			m_effectfactory.NextEffect();
+		}
 
 		// Configure the instrument object
 		if (instrument != NULL)
@@ -128,9 +151,16 @@ bool CSynthesizer::Generate(double * frame)
 	// Phase 2: Clear all channels to silence 
 	//
 
-	for (int c = 0; c<GetNumChannels(); c++)
-	{
+	for (int c = 0; c < GetNumChannels(); c++)
 		frame[c] = 0;
+	
+	double channelframes[NUMEFFECTCHANNELS][2];
+	for (int i = 0; i < NUMEFFECTCHANNELS; i++)
+	{
+		for (int c = 0; c < GetNumChannels(); c++)
+		{
+			channelframes[i][c] = 0;
+	}
 	}
 
 	//
@@ -159,9 +189,12 @@ bool CSynthesizer::Generate(double * frame)
 		{
 			// If we returned true, we have a valid sample.  Add it 
 			// to the frame.
-			for (int c = 0; c<GetNumChannels(); c++)
+			for (int i = 0; i < NUMEFFECTCHANNELS; i++)
 			{
-				frame[c] += instrument->Frame(c);
+				for (int c = 0; c < GetNumChannels(); c++)
+			{
+					channelframes[i][c] += instrument->Frame(c) * instrument->Send(i);
+				}
 			}
 		}
 		else
@@ -175,6 +208,25 @@ bool CSynthesizer::Generate(double * frame)
 		// Move to the next instrument in the list
 		node = next;
 	}
+
+	// 
+	// Phase 3a: Effects
+	//
+
+	// Process each effect channel
+	for (int i = 0; i < NUMEFFECTCHANNELS; i++)
+	{
+		if (m_effects[i])
+			m_effects[i]->ProcessStart(channelframes[i]);
+	}
+
+	// Mix effects with original audio
+	for (int i = 0; i < NUMEFFECTCHANNELS; i++)
+	{
+		for (int c = 0; c < GetNumChannels(); c++)
+			frame[c] += channelframes[i][c];
+	}
+
 	//
 	// Phase 4: Advance the time and beats
 	//
@@ -211,11 +263,23 @@ double CSynthesizer::GetTime()
 {
 	return m_time;
 }
+
+
 void CSynthesizer::Clear()
 {
 	m_instruments.clear();
 	m_notes.clear();
+	
+	for (int i = 0; i < NUMEFFECTCHANNELS; i++)
+	{
+		if (m_effects[i] != NULL)
+			delete m_effects[i];
+	}
+
+	m_effectfactory.Clear();
 }
+
+
 void CSynthesizer::XmlLoadScore(IXMLDOMNode * xml)
 {
 	// Get a list of all attribute nodes and the
@@ -272,6 +336,8 @@ void CSynthesizer::XmlLoadScore(IXMLDOMNode * xml)
 		}
 	}
 }
+
+
 void CSynthesizer::OpenScore(CString & filename)
 {
 	Clear();
@@ -317,6 +383,8 @@ void CSynthesizer::OpenScore(CString & filename)
 	}
 	sort(m_notes.begin(), m_notes.end());
 }
+
+
 void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 {
 	wstring instrument = L"";
@@ -362,11 +430,27 @@ void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 		{
 			XmlLoadNote(node, instrument);
 		}
+		if (name == L"effect")
+		{
+			XmlLoadEffect(node, instrument);
+		}
 	}
 
 }
+
+
 void CSynthesizer::XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument)
 {
 	m_notes.push_back(CNote());
 	m_notes.back().XmlLoad(xml, instrument);
+}
+
+
+void CSynthesizer::XmlLoadEffect(IXMLDOMNode * xml, std::wstring & instrument)
+{
+	m_notes.push_back(CNote());
+	m_notes.back().XmlLoad(xml, std::wstring(L"effect"));
+	CNote n;
+	n.XmlLoad(xml, instrument);
+	m_effectfactory.AddNote(n);
 }

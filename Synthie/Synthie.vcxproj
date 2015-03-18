@@ -132,11 +132,17 @@
     <ClCompile Include="audio\DirSound.cpp" />
     <ClCompile Include="audio\DirSoundSource.cpp" />
     <ClCompile Include="audio\DirSoundStream.cpp" />
+    <ClCompile Include="Chorus.cpp" />
+    <ClCompile Include="DelayEffect.cpp" />
+    <ClCompile Include="Effect.cpp" />
+    <ClCompile Include="EffectFactory.cpp" />
+    <ClCompile Include="Flanging.cpp" />
     <ClCompile Include="DrumInstrument.cpp" />
     <ClCompile Include="DrumInstrumentFactory.cpp" />
     <ClCompile Include="Instrument.cpp" />
     <ClCompile Include="LongWaveTable.cpp" />
     <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="NoiseGating.cpp" />
     <ClCompile Include="Note.cpp" />
     <ClCompile Include="Notes.cpp" />
     <ClCompile Include="OddSines.cpp" />
@@ -145,6 +151,7 @@
     <ClCompile Include="Progress.cpp" />
     <ClCompile Include="ProgressDlg.cpp" />
     <ClCompile Include="ShortWaveTable.cpp" />
+    <ClCompile Include="Reverberation.cpp" />
     <ClCompile Include="SineWave.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -160,6 +167,7 @@
     <ClCompile Include="WaveInstrument.cpp" />
     <ClCompile Include="WaveInstrumentFactory.cpp" />
     <ClCompile Include="WavePlayer.cpp" />
+    <ClCompile Include="Wrapper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ADSR.h" />
@@ -170,9 +178,15 @@
     <ClInclude Include="audio\DirSoundStream.h" />
     <ClInclude Include="DrumInstrument.h" />
     <ClInclude Include="DrumInstrumentFactory.h" />
+    <ClInclude Include="Chorus.h" />
+    <ClInclude Include="DelayEffect.h" />
+    <ClInclude Include="Effect.h" />
+    <ClInclude Include="EffectFactory.h" />
+    <ClInclude Include="Flanging.h" />
     <ClInclude Include="Instrument.h" />
     <ClInclude Include="LongWaveTable.h" />
     <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="NoiseGating.h" />
     <ClInclude Include="Note.h" />
     <ClInclude Include="Notes.h" />
     <ClInclude Include="OddSines.h" />
@@ -182,6 +196,7 @@
     <ClInclude Include="ProgressDlg.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ShortWaveTable.h" />
+    <ClInclude Include="Reverberation.h" />
     <ClInclude Include="SineWave.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Synthesizer.h" />
@@ -195,6 +210,7 @@
     <ClInclude Include="WaveInstrument.h" />
     <ClInclude Include="WaveInstrumentFactory.h" />
     <ClInclude Include="WavePlayer.h" />
+    <ClInclude Include="Wrapper.h" />
     <ClInclude Include="xmlhelp.h" />
   </ItemGroup>
   <ItemGroup>

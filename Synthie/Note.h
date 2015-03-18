@@ -1,5 +1,10 @@
 #pragma once
 #include <string>
+
+#ifndef NUMEFFECTCHANNELS
+#define NUMEFFECTCHANNELS 5
+#endif
+
 class CNote
 {
 public:
@@ -11,10 +16,14 @@ public:
 	IXMLDOMNode *Node() { return m_node; }
 	void XmlLoad(IXMLDOMNode * xml, std::wstring & instrument);
 	bool operator<(const CNote &b);
+	void SetSend(int i, double v) { sends[i] = v; }
+	double GetSend(int i){ return sends[i]; }
+
 private:
 	std::wstring m_instrument;
 	int m_measure;
 	double m_beat;
 	CComPtr<IXMLDOMNode> m_node;
+	double sends[NUMEFFECTCHANNELS];
 };
 
