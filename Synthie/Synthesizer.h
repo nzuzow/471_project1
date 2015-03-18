@@ -12,6 +12,7 @@ using namespace std;
 #include "LongWaveFactory.h"
 #include "Effect.h"
 #include "EffectFactory.h"
+#include "SubtractiveFactory.h"
 
 #define CHORUS 1
 #define FLANGING 2
@@ -62,6 +63,7 @@ private:
 	CWaveInstrumentFactory m_waveinstfactory;
 	CDrumInstrumentFactory m_drumfactory;
 	CShortWaveFactory m_shortwavefactory;
+	CSubtractiveFactory m_subtractivefactory;
 	std::list<CInstrument *>  m_instruments;	//!< List of synthesizer instruments
 	std::vector<CNote> m_notes;					//!< List of notes in the synthesizer
 	CEffect * m_effects[NUMEFFECTCHANNELS];		//!< List of synthesizer effects
