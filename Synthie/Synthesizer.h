@@ -8,6 +8,7 @@ using namespace std;
 #include "OddSinesFactory.h"
 #include "WaveInstrumentFactory.h"
 #include "DrumInstrumentFactory.h"
+#include "LongWaveFactory.h"
 
 #include "Effect.h"
 #include "EffectFactory.h"
@@ -64,6 +65,8 @@ private:
 	std::vector<CNote> m_notes;					//!< List of notes in the synthesizer
 	CEffect * m_effects[NUMEFFECTCHANNELS];		//!< List of synthesizer effects
 	CEffectFactory m_effectfactory;					//!< Factory for creating effects
+
+	CLongWaveFactory m_longwavefactory;
 
 public:
 	void Start();

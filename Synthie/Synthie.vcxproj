@@ -140,6 +140,8 @@
     <ClCompile Include="DrumInstrument.cpp" />
     <ClCompile Include="DrumInstrumentFactory.cpp" />
     <ClCompile Include="Instrument.cpp" />
+    <ClCompile Include="LongWaveFactory.cpp" />
+    <ClCompile Include="LongWaveInstrument.cpp" />
     <ClCompile Include="LongWaveTable.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="NoiseGating.cpp" />
@@ -184,6 +186,8 @@
     <ClInclude Include="EffectFactory.h" />
     <ClInclude Include="Flanging.h" />
     <ClInclude Include="Instrument.h" />
+    <ClInclude Include="LongWaveFactory.h" />
+    <ClInclude Include="LongWaveInstrument.h" />
     <ClInclude Include="LongWaveTable.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="NoiseGating.h" />
