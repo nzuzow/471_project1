@@ -2,6 +2,7 @@
 #include "Synthesizer.h"
 #include "Instrument.h"
 #include "ToneInstrument.h"
+#include "OddSinesInstrument.h"
 #include "xmlhelp.h"
 #include <vector>
 #include <algorithm>
@@ -25,6 +26,8 @@ CSynthesizer::CSynthesizer()
 	{
 		m_effects[i] = NULL;
 	}
+
+	m_waveinstfactory.LoadFile("drumriff.wav");
 }
 
 
@@ -85,6 +88,32 @@ bool CSynthesizer::Generate(double * frame)
 		{
 			instrument = new CToneInstrument(GetBeatsPerMinute());
 		}
+		else if (note->Instrument() == L"OddSines")
+		{
+			m_oddsinesfactory.SetNote(note);
+			instrument = m_oddsinesfactory.CreateInstrument();
+		}
+		else if (note->Instrument() == L"Wave")
+		{
+			m_waveinstfactory.SetNote(note);
+			instrument = m_waveinstfactory.CreateInstrument();
+		}
+
+		else if (note->Instrument() == L"WaveTable")
+		{
+			m_oddsinesfactory.SetNote(note);
+			instrument = m_oddsinesfactory.CreateInstrument();
+		}
+		else if (note->Instrument() == L"Subtractive")
+		{
+			m_oddsinesfactory.SetNote(note);
+			instrument = m_oddsinesfactory.CreateInstrument();
+		}
+		else if (note->Instrument() == L"Drum")
+		{
+			m_drumfactory.SetNote(note);
+			instrument = m_drumfactory.CreateInstrument();
+		}
 		else if (note->Instrument() == L"Chorus")
 		{
 			m_effects[CHORUS] = new CChorus();
@@ -131,7 +160,7 @@ bool CSynthesizer::Generate(double * frame)
 		for (int c = 0; c < GetNumChannels(); c++)
 		{
 			channelframes[i][c] = 0;
-		}
+	}
 	}
 
 	//
@@ -163,7 +192,7 @@ bool CSynthesizer::Generate(double * frame)
 			for (int i = 0; i < NUMEFFECTCHANNELS; i++)
 			{
 				for (int c = 0; c < GetNumChannels(); c++)
-				{
+			{
 					channelframes[i][c] += instrument->Frame(c) * instrument->Send(i);
 				}
 			}

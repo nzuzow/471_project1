@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<score bpm="120" beatspermeasure="2">
+     <instrument instrument="OddSines">
+        <note measure="1" beat="1" duration="1" note="C4" drawbar="88100088"/>
+		<note measure="1" beat="2" duration="1" note="D4"/>
+		<note measure="1" beat="3" duration="1" note="E4"/>
+		<note measure="1" beat="1" duration="1.9" note="C4" a1=".5" a3=".4" a5=".3" a7=".2"/>
+     </instrument>
+</score>
+

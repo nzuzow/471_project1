@@ -1,15 +1,18 @@
 #pragma once
+#pragma once
 #include "AudioNode.h"
-class CAR :
+class CADSR :
 	public CAudioNode
 {
 public:
-	CAR();
-	~CAR();
+	CADSR();
+	~CADSR();
 private:
 	double m_duration;
 	double m_time;
 	double m_attack;
+	double m_decay;
+	double m_sustain;
 	double m_release;
 	int pushtest;
 	CAudioNode* m_source;
