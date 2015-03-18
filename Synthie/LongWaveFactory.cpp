@@ -15,6 +15,9 @@ CLongWaveFactory::CLongWaveFactory()
 	LoadFile("short_audio/synthFunky1.wav");
 	LoadFile("short_audio/brassGuitarHit4.wav");
 	LoadFile("short_audio/bandFluteHit7.wav");
+	LoadFile("short_audio/bandEnd1.wav");
+	LoadFile("short_audio/bandFunk.wav");
+
 	//LoadFile("beepers02.wav");
 
 	/*for (double time = 0; time<2; time += 1. / 44100.)

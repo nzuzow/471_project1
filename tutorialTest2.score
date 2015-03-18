@@ -4,7 +4,7 @@
 		<note measure="1" beat="1" duration="8" note="C4"/>
 	</instrument>
 	<instrument instrument="Drum"> 
-		<note measure="1" beat="2" DrumType="Snare3" duration="20" note="C5"/>
+		<note measure="1" beat="2" DrumType="Snare3" duration="11" note="C5"/>
 	</instrument>
 	<instrument instrument="LongWave"> 
 		<note measure="2" beat="1" Wave="W1" duration="1"/>
@@ -13,7 +13,7 @@
 		<note measure="2" beat="2" Wave="W2" duration="3"/>
 	</instrument>
 	<instrument instrument="LongWave"> 
-		<note measure="2" beat="3" Wave="W3" duration="3"/>
+		<note measure="2" beat="3" Wave="W3" duration="2"/>
 	</instrument>
 	<instrument instrument="LongWave"> 
 		<note measure="3" beat="1" Wave="W1" duration="1"/>
@@ -23,5 +23,503 @@
 	</instrument>
 	<instrument instrument="LongWave"> 
 		<note measure="3" beat="3" Wave="W3" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W4" duration="2"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="4" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="1" DrumType="Hit1" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="2" DrumType="Snare3" duration="12" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave">
+		<note measure="4" beat="1" Wave="W5" duration="5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="1" SubType="Sawtooth" duration="3"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="2" SubType="Square" duration="2"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="HiHat2" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="Skin1" duration="4" note="C5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="1" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="1" beat="2" DrumType="Snare3" duration="11" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="3" Wave="W3" duration="2"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W3" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W4" duration="2"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="4" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="1" DrumType="Hit1" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="2" DrumType="Snare3" duration="12" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave">
+		<note measure="4" beat="1" Wave="W5" duration="5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="1" SubType="Sawtooth" duration="3"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="2" SubType="Square" duration="2"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="HiHat2" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="Skin1" duration="4" note="C5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="1" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="1" beat="2" DrumType="Snare3" duration="11" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="3" Wave="W3" duration="2"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W3" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W4" duration="2"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="4" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="1" DrumType="Hit1" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="2" DrumType="Snare3" duration="12" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave">
+		<note measure="4" beat="1" Wave="W5" duration="5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="1" SubType="Sawtooth" duration="3"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="2" SubType="Square" duration="2"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="HiHat2" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="Skin1" duration="4" note="C5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="1" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="1" beat="2" DrumType="Snare3" duration="11" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="3" Wave="W3" duration="2"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W3" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W4" duration="2"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="4" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="1" DrumType="Hit1" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="2" DrumType="Snare3" duration="12" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave">
+		<note measure="4" beat="1" Wave="W5" duration="5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="1" SubType="Sawtooth" duration="3"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="2" SubType="Square" duration="2"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="HiHat2" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="Skin1" duration="4" note="C5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="1" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="1" beat="2" DrumType="Snare3" duration="11" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="3" Wave="W3" duration="2"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W3" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W4" duration="2"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="4" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="1" DrumType="Hit1" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="2" DrumType="Snare3" duration="12" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave">
+		<note measure="4" beat="1" Wave="W5" duration="5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="1" SubType="Sawtooth" duration="3"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="2" SubType="Square" duration="2"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="HiHat2" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="Skin1" duration="4" note="C5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="1" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="1" beat="2" DrumType="Snare3" duration="11" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="3" Wave="W3" duration="2"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W3" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W4" duration="2"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="4" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="1" DrumType="Hit1" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="2" DrumType="Snare3" duration="12" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave">
+		<note measure="4" beat="1" Wave="W5" duration="5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="2" Wave="W2" duration="2"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="3" Wave="W3" duration="2"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="1" SubType="Sawtooth" duration="3"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="2" SubType="Square" duration="2"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="HiHat2" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="2" Wave="W4" duration="2"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="3" Wave="W3" duration="2"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="Skin1" duration="4" note="C5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="1" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="1" beat="2" DrumType="Snare3" duration="11" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="3" Wave="W3" duration="2"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W3" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W4" duration="2"/>
+	</instrument>
+	<instrument instrument="Wave">
+		<note measure="4" beat="1" duration="8" note="C4"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="1" DrumType="Hit1" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="4" beat="2" DrumType="Snare3" duration="12" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave">
+		<note measure="4" beat="1" Wave="W5" duration="5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="2" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="3" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="357harm" duration="1"/>
+	</instrument>
+	<instrument instrument="ShortWaveTable"> 
+		<note measure="4" beat="4" WaveIdx="multisine" duration="1"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="1" SubType="Sawtooth" duration="3"/>
+	</instrument>
+	<instrument instrument="Subtractive">
+		<note measure="5" beat="2" SubType="Square" duration="2"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="HiHat2" duration="1" note="C5"/>
+	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="5" beat="3" DrumType="Skin1" duration="4" note="C5"/>
+		<effect measure="4" beat="1" duration="0.5" send0="0.5" send1="0.5"/>
 	</instrument>
 </score>
