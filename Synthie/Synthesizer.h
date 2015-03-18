@@ -8,6 +8,7 @@ using namespace std;
 #include "OddSinesFactory.h"
 #include "WaveInstrumentFactory.h"
 #include "DrumInstrumentFactory.h"
+#include "SubtractiveFactory.h"
 
 #include "Effect.h"
 #include "EffectFactory.h"
@@ -60,6 +61,7 @@ private:
 	COddSinesFactory m_oddsinesfactory;
 	CWaveInstrumentFactory m_waveinstfactory;
 	CDrumInstrumentFactory m_drumfactory;
+	CSubtractiveFactory m_subtractivefactory;
 	std::list<CInstrument *>  m_instruments;	//!< List of synthesizer instruments
 	std::vector<CNote> m_notes;					//!< List of notes in the synthesizer
 	CEffect * m_effects[NUMEFFECTCHANNELS];		//!< List of synthesizer effects

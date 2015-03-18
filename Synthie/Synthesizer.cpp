@@ -106,8 +106,8 @@ bool CSynthesizer::Generate(double * frame)
 		}
 		else if (note->Instrument() == L"Subtractive")
 		{
-			m_oddsinesfactory.SetNote(note);
-			instrument = m_oddsinesfactory.CreateInstrument();
+			m_subtractivefactory.SetNote(note);
+			instrument = m_subtractivefactory.CreateInstrument();
 		}
 		else if (note->Instrument() == L"Drum")
 		{
