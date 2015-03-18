@@ -47,7 +47,11 @@ CDrumInstrumentFactory::~CDrumInstrumentFactory()
 
 CDrumInstrument *CDrumInstrumentFactory::CreateInstrument()
 {
+
 	CDrumInstrument *instrument = new CDrumInstrument();
+	instrument->SetAmp(m_amp);
+	instrument->SetType(m_type);
+	instrument->SetFreq(m_freq);
 	instrument->GetPlayer()->SetSamples(&m_waves[m_type][0], (int)m_waves[m_type].size());
 
 	return instrument;

@@ -68,15 +68,16 @@ bool CDrumInstrument::Generate()
 {
 	bool valid = m_wavePlayer.Generate();
 
+
 	m_frame[0] = m_wavePlayer.Frame(0);
-	m_frame[1] = m_frame[0];
+	m_frame[1] = m_wavePlayer.Frame(1);
 
-
+	return valid;
 	// Update time
-	m_time += GetSamplePeriod();
+	//m_time += GetSamplePeriod();
 
 	// We return true until the time reaches the duration.
-	return m_time < m_duration;
+	//return m_time < m_duration;
 }
 
 void CDrumInstrument::SetType(int type)
