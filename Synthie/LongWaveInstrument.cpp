@@ -1,34 +1,30 @@
 #include "stdafx.h"
-#include "ShortWaveTable.h"
+#include "LongWaveInstrument.h"
+#include "LongWaveFactory.h"
 #include "Notes.h"
+//#include "SineWave.h"
 
-CShortWaveTable::CShortWaveTable()
+
+CLongWaveInstrument::CLongWaveInstrument()
 {
-	
+	m_longWave.SetFreq(100);
+	m_freq = 300;
+	m_amp = .5;
 }
 
 
-CShortWaveTable::~CShortWaveTable()
+CLongWaveInstrument::~CLongWaveInstrument()
 {
-	m_sine.SetSampleRate(GetSampleRate());
-	m_sine.Start();
-	m_ar.SetSource(&m_sine);
-
-	m_ar.SetSampleRate(GetSampleRate());
-	m_ar.Start();
-	m_time = 0;
 }
 
-
-
-void CShortWaveTable::Start()
+void CLongWaveInstrument::Start()
 {
 	m_wavePlayer.SetSampleRate(GetSampleRate());
 	m_wavePlayer.Start();
 	m_time = 0;
 }
 
-void CShortWaveTable::SetNote(CNote *note)
+void CLongWaveInstrument::SetNote(CNote *note)
 {
 	// Get a list of all attribute nodes and the
 	// length of that list
@@ -67,7 +63,7 @@ void CShortWaveTable::SetNote(CNote *note)
 
 }
 
-bool CShortWaveTable::Generate()
+bool CLongWaveInstrument::Generate()
 {
 	bool valid = m_wavePlayer.Generate();
 
@@ -76,9 +72,9 @@ bool CShortWaveTable::Generate()
 	m_frame[1] = m_wavePlayer.Frame(1);
 
 	return valid;
-	// Update time
-	//m_time += GetSamplePeriod();
+}
 
-	// We return true until the time reaches the duration.
-	//return m_time < m_duration;
+void CLongWaveInstrument::SetType(int type)
+{
+	m_type = type;
 }

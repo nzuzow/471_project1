@@ -132,10 +132,7 @@
     <ClCompile Include="ShortWaveTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SubtractiveFactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Subtractive.cpp">
+    <ClCompile Include="ShortWaveFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -266,10 +263,7 @@
     <ClInclude Include="ShortWaveTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SubtractiveFactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Subtractive.h">
+    <ClInclude Include="ShortWaveFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

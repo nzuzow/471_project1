@@ -3,4 +3,25 @@
 	<instrument instrument="Wave">
 		<note measure="1" beat="1" duration="8" note="C4"/>
 	</instrument>
+	<instrument instrument="Drum"> 
+		<note measure="1" beat="2" DrumType="Snare3" duration="20" note="C5"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="2" beat="3" Wave="W3" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="1" Wave="W1" duration="1"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="2" Wave="W2" duration="3"/>
+	</instrument>
+	<instrument instrument="LongWave"> 
+		<note measure="3" beat="3" Wave="W3" duration="3"/>
+	</instrument>
 </score>
