@@ -99,10 +99,10 @@ bool CSynthesizer::Generate(double * frame)
 			instrument = m_waveinstfactory.CreateInstrument();
 		}
 
-		else if (note->Instrument() == L"WaveTable")
+		else if (note->Instrument() == L"ShortWaveTable")
 		{
-			m_oddsinesfactory.SetNote(note);
-			instrument = m_oddsinesfactory.CreateInstrument();
+			m_shortwavefactory.SetNote(note);
+			instrument = m_shortwavefactory.CreateInstrument();
 		}
 		else if (note->Instrument() == L"Subtractive")
 		{

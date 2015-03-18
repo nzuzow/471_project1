@@ -150,6 +150,7 @@
     <ClCompile Include="OddSinesInstrument.cpp" />
     <ClCompile Include="Progress.cpp" />
     <ClCompile Include="ProgressDlg.cpp" />
+    <ClCompile Include="ShortWaveFactory.cpp" />
     <ClCompile Include="ShortWaveTable.cpp" />
     <ClCompile Include="Reverberation.cpp" />
     <ClCompile Include="SineWave.cpp" />
@@ -195,6 +196,7 @@
     <ClInclude Include="Progress.h" />
     <ClInclude Include="ProgressDlg.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="ShortWaveFactory.h" />
     <ClInclude Include="ShortWaveTable.h" />
     <ClInclude Include="Reverberation.h" />
     <ClInclude Include="SineWave.h" />

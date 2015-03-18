@@ -126,6 +126,15 @@
     <ClCompile Include="Reverberation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LongWaveTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortWaveTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortWaveFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audio\DirSound.h">
@@ -246,6 +255,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Reverberation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LongWaveTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShortWaveTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShortWaveFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
